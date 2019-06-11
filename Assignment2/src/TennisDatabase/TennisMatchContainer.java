@@ -10,7 +10,7 @@ import java.util.Iterator;
  * sorted by date
  * @author Ben Kepner
  */
-public class TennisMatchContainer implements TennisMatchContainerInterface
+class TennisMatchContainer implements TennisMatchContainerInterface
 {
 	
 	private ArrayList<TennisMatch> matches; //internal array of matches

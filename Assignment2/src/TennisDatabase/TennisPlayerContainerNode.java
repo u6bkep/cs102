@@ -6,7 +6,7 @@ package TennisDatabase;
  * @author Ben Kepner
  *
  */
-public class TennisPlayerContainerNode implements TennisPlayerContainerNodeInterface
+class TennisPlayerContainerNode implements TennisPlayerContainerNodeInterface
 {
 	
 	TennisPlayer player;					//the player

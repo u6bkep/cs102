@@ -5,7 +5,7 @@ package TennisDatabase;
  * @author Ben Kepner
  *
  */
-public class TennisPlayerContainer implements TennisPlayerContainerInterface, Iterable<TennisPlayer>
+class TennisPlayerContainer implements TennisPlayerContainerInterface, Iterable<TennisPlayer>
 {
 	
 	TennisPlayerContainerNode root;
