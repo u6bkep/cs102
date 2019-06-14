@@ -118,6 +118,11 @@ public class TennisMatch implements TennisMatchInterface {
 	{
 		return this.Date.getDayOfMonth();
 	}
+	
+	public LocalDate getDate() 
+	{
+		return this.Date;
+	}
 
 	/**
 	 * get the location of the match

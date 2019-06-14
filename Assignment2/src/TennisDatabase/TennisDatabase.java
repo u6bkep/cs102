@@ -102,7 +102,7 @@ public class TennisDatabase implements TennisDatabaseInterface
 						
 					} catch (Exception e) {
 						throw new TennisDatabaseException("error in parsing player " + 
-						splitLine[1] + "\n" + e.getStackTrace());
+						splitLine[1] + ":\n" + e.getMessage());
 					}
 					break;
 				case "MATCH":
@@ -152,14 +152,18 @@ public class TennisDatabase implements TennisDatabaseInterface
 		{
 			fileString += "PLAYER/" + x.id + "/" + x.firstName +
 					"/" + x.lastName + "/" + x.getBirthYear() +
-					"/" + x.country + "\n";
+					"/" + x.country + System.lineSeparator();
 		}
 		for(TennisMatch x: this.tmc.getAllMatches())
 		{
+//			fileString += "MATCH/" + x.idPlayer1 +
+//					"/" + x.idPlayer2 + "/" + Integer.toString(x.getDateYear()) +
+//					Integer.toString(x.getDateMonth()) + Integer.toString(x.getDateDay()) + 
+//					"/" + x.location + "/" + x.score + "\n";
+			
 			fileString += "MATCH/" + x.idPlayer1 +
-					"/" + x.idPlayer2 + "/" + Integer.toString(x.getDateYear()) +
-					Integer.toString(x.getDateMonth()) + Integer.toString(x.getDateDay()) + 
-					"/" + x.location + "/" + x.score + "\n";
+					"/" + x.idPlayer2 + "/" + x.Date.format(DateTimeFormatter.ofPattern("yyyyMMdd")) + 
+					"/" + x.location + "/" + x.score + System.lineSeparator();
 		}
 		
 		//save the data to a file

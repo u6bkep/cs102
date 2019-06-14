@@ -161,6 +161,11 @@ public class TennisPlayer implements TennisPlayerInterface
 	{
 		return country;
 	}
+	
+	public String getName()
+	{
+		return(this.firstName + " " + this.lastName);
+	}
 
 
 	
